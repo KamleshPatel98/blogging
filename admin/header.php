@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if(empty($_SESSION['id'])){
+        header('Location:../login.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +71,7 @@
                     <ul class="navbar-mobile__list list-unstyled">
                         <li>
                             <a href="index.php">
-                                <i class="far fa-check-square"></i>Dashboard</a>
+                                <i class="far fa-check-square"></i>Dashboard </a>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="#">
@@ -75,10 +81,22 @@
                                     <a href="add_blog.php">Add Blog</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Blog List</a>
+                                    <a href="blog_list.php">Blog List</a>
                                 </li>
                             </ul>
                         </li>
+                       
+                        <?php 
+                            if($_SESSION['role'] == "admin"){
+                                ?>
+                                    <li>
+                                        <a href="author.php">
+                                            <i class="far fa-check-square"></i>Author</a>
+                                    </li>
+                                <?php
+                            }
+                        ?>
+                        
                         <li>
                             <a href="../logout.php">
                                 <i class="far fa-check-square"></i>Logout</a>
@@ -111,10 +129,22 @@
                                     <a href="add_blog.php">Add Blog</a>
                                 </li>
                                 <li>
-                                    <a href="register.html">Blog List</a>
+                                    <a href="blog_list.php">Blog List</a>
                                 </li>
                             </ul>
                         </li>
+
+                        <?php 
+                            if($_SESSION['role'] == "admin"){
+                                ?>
+                                    <li>
+                                        <a href="author.php">
+                                            <i class="far fa-check-square"></i>Author</a>
+                                    </li>
+                                <?php
+                            }
+                        ?>
+
                         <li>
                             <a href="../logout.php">
                                 <i class="far fa-check-square"></i>Logout</a>

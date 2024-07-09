@@ -1,3 +1,4 @@
+<?php include 'config.php'; ?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -43,9 +44,9 @@
         <div class="collapse navbar-collapse text-center" id="navbarsExample09">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
+            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+            </li> 
+            <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown03">
                     <li><a class="dropdown-item" href="about.html">Our company</a></li>
@@ -53,14 +54,16 @@
                 </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="project.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="project.html">Portfolio</a></li> -->
+            <li class="nav-item"><a class="nav-link" href="register.php">Sign Up</a></li> 
+            <li class="nav-item"><a class="nav-link" href="login.php">Sign In</a></li>
             <li class="nav-item"><a class="nav-link" href="blog-grid.php">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
                 </ul>
 
-                <form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
+                <!-- <form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
                 <a href="contact.html" class="btn btn-solid-border btn-round-full">Get a Quote</a>
-                </form>
+                </form> -->
             </div>
 		</div>
 	</nav>

@@ -4,13 +4,15 @@
     if(isset($_POST['login'])){
         $email=mysqli_real_escape_string($conn,$_POST['email']);
         $password=mysqli_real_escape_string($conn,$_POST['password']);
-        $sql="SELECT * FROM customer WHERE `email`='$email' && `password`='$password'";
+        $sql="SELECT * FROM customer WHERE `email`='$email' && `password`='$password' && `status`='0'";
         $res=mysqli_query($conn,$sql);
         $row=mysqli_fetch_assoc($res);
+        //print_r($row);
         if($res){
             $_SESSION['id']=$row['id'];
             $_SESSION['username']=$row['username'];
             $_SESSION['email']=$row['email'];
+            $_SESSION['role']=$row['role'];
             $_SESSION['login']="Login Successfully!";
             header('Location:admin/index.php');
         }else{
